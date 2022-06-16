@@ -82,11 +82,11 @@ customColor.addEventListener("click", () => {
         setTimeout(() => (pop.style.transform = "translate(0%)", pop.style.opacity = "1"), 100)
         // pop.style.opacity = "1"
         // pop.classList.add("popUp")
-        pop.style.animation = "popUp 2s"
+        pop.style.animation = "popUp 1s"
     } else {
         // pop.style.transform = "translate(30%)"
        setTimeout(() => ( pop.style.transform = "translate(-50%)",pop.style.opacity = "0"),100)
-       pop.style.animation = "popOut 2s"
+       pop.style.animation = "popOut 1s"
 
         // pop.style.opacity = "0"
         // pop.classList.add("popOut")
