@@ -10,6 +10,7 @@
     <title>Calculator</title>
   </head>
   <body>
+      <div class="overlay"></div>
   <div class="main-container">
         <div class="container">
           <p class="display"></p>
@@ -47,6 +48,7 @@
                 <!-- 5 -->
                 <div>            
                   <button class="custom-color"><a><img src="./images/pngegg.png" alt=""></a></button>
+                  <button class="mo"><a><img src="./images/pngegg.png" alt=""></a></button>
                 <button>0</button>
                 <button>.</button>
                 <button class="equal">=</button>
@@ -68,7 +70,7 @@
                    <!-- =============== btn ============= -->
                    <div class="color-btn">
                        <p>Change the color</p>
-                    <form id="c-btn-form" action="">
+                    <form class="form" id="c-btn-form" action="">
                         <input  type="color" name="color" id="c-btn">
                         <input type="submit" value="Change color">
                     </form>
@@ -76,8 +78,39 @@
                <!-- =================== font ========== -->
                <div class="color-font">
                    <p>Change the font color</p>
-                <form id="c-font-form" action="">
+                <form class="form" id="c-font-form" action="">
                     <input type="color" name="color" id="c-font">
+                    <input type="submit" value="Change color">
+                </form>
+           </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================ -->
+        <div class="pop1">
+            <div class="pop-container">
+                <!-- ===== top === -->
+                <div class="top">
+                    <a ><img src="./images/pngegg.png" alt=""></a>
+                    <p>Customize Color</p>
+                </div>
+                <!-- === bottom ======== -->            
+                <div class="bottom">
+                   
+                   <!-- =============== btn ============= -->
+                   <div class="color-btn">
+                       <p>Change the color</p>
+                    <form class="form1" id="c-btn-form-mo" action="">
+                        <input  type="color" name="color" id="c-btn-mo">
+                        <input type="submit" value="Change color">
+                    </form>
+               </div>
+               <!-- =================== font ========== -->
+               <div class="color-font">
+                   <p>Change the font color</p>
+                <form class="form1" id="c-font-form-mo" action="">
+                    <input type="color" name="color" id="c-font-mo">
                     <input type="submit" value="Change color">
                 </form>
            </div>
