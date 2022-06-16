@@ -16,7 +16,8 @@ let formMo = document.querySelectorAll(".form1");
 let customColor = document.querySelector(".custom-color")
 let customColorMo = document.querySelector(".mo")
 buttons.forEach((p) => {
-  p.addEventListener("click", (e) => {
+    p.addEventListener("click", (e) => {
+      console.log(e)
     if (e.target.innerText == "C") {
       display.innerText = "";
     } else if (e.target.innerText == "←") {
@@ -56,7 +57,6 @@ form.forEach((p) => {
 
 
 formMo.forEach(p => {
-    console.log(p)
     p.addEventListener("submit", (e) => {
         e.preventDefault()
         if (p.matches("#c-btn-form-mo")) {
