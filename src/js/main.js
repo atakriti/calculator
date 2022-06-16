@@ -75,18 +75,18 @@ formMo.forEach(p => {
 
 // ========= custom color ========
 // pop.style.width = "0"
-pop.style.transform = "translate(30%)"
+pop.style.transform = "translate(-50%)"
 pop.style.opacity = "0"
 customColor.addEventListener("click", () => {
-    if (pop.style.transform === "translate(30%)") {
+    if (pop.style.transform === "translate(-50%)") {
         setTimeout(() => (pop.style.transform = "translate(0%)", pop.style.opacity = "1"), 100)
         // pop.style.opacity = "1"
         // pop.classList.add("popUp")
-        pop.style.animation = "popUp 1s"
+        pop.style.animation = "popUp 2s"
     } else {
         // pop.style.transform = "translate(30%)"
-       setTimeout(() => ( pop.style.transform = "translate(30%)",pop.style.opacity = "0"),100)
-       pop.style.animation = "popOut 1s"
+       setTimeout(() => ( pop.style.transform = "translate(-50%)",pop.style.opacity = "0"),100)
+       pop.style.animation = "popOut 2s"
 
         // pop.style.opacity = "0"
         // pop.classList.add("popOut")
@@ -96,16 +96,16 @@ customColor.addEventListener("click", () => {
 
 // ================= mobile ====================
 
-pop1.style.transform = "scale(0)"
+pop1.style.transform = "translateY(-100%)"
 pop1.style.opacity = "0"
 customColorMo.addEventListener("click", () => {
-    if (pop1.style.transform === "scale(0)") {
-        setTimeout(() => (pop1.style.transform = "scale(1)", pop1.style.opacity = "1"), 100)
-        pop1.style.animation = "popScaleUp 2s"
+    if (pop1.style.transform === "translateY(-100%)") {
+        setTimeout(() => (pop1.style.transform = "translateY(0%)", pop1.style.opacity = "1"), 100)
+        pop1.style.animation = "popScaleUp 1s"
     } else {
-       setTimeout(() => ( pop1.style.transform = "scale(0)",pop1.style.opacity = "0"),1000)
+       setTimeout(() => ( pop1.style.transform = "translateY(-100%)",pop1.style.opacity = "0"),1000)
     //    pop1.style.animation = "popOut 2s"
-    pop1.style.animation = "popScaleDown 2s"
+    pop1.style.animation = "popScaleDown 1s"
         
 
   
