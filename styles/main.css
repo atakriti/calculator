@@ -33,6 +33,7 @@ body {
   border: 1px black solid;
   border-radius: 20px 0 0 20px;
   overflow: hidden;
+  transition: 0.3s;
   box-shadow: 0px 3px 10px black;
 }
 .main-container .container p {
@@ -84,12 +85,17 @@ body {
 .main-container .container .calculator div .mo {
   display: none;
 }
+.main-container .container:hover {
+  transition: 0.7s;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.473);
+}
 .main-container .pop1 {
   display: none;
 }
 .main-container .pop {
   background-color: rgb(109, 109, 109);
   width: 30%;
+  height: 80%;
   overflow: hidden;
   border-radius: 0 20px 20px 0;
   box-shadow: 0px 3px 10px black;
