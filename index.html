@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anwar Takriti" />
+    <meta name="Description" content="Calculator" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+      <div class="overlay"></div>
+  <div class="main-container">
+        <div class="container">
+          <p class="display"></p>
+            <div class="calculator">
+               
+               
+                <!-- 1 -->
+                <div>
+                    <button>C</button>
+                    <button>←</button>
+                    <button>%</button>
+                    <button>/</button>
+                </div>
+                <!-- 2 -->
+                <div>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>*</button>
+                </div>
+                <!-- 3 -->
+                <div>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>-</button>
+                </div>
+                <!-- 4 -->
+                <div>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>+</button>
+                </div>
+                <!-- 5 -->
+                <div>            
+                  <button class="custom-color"><a><img src="./images/pngegg.png" alt=""></a></button>
+                  <button class="mo"><a><img src="./images/pngegg.png" alt=""></a></button>
+                <button>0</button>
+                <button>.</button>
+                <button class="equal">=</button>
+                </div>
+      
+            </div>
+        </div>
+        <!-- ========================== popup =============== -->
+        <div class="pop">
+            <div class="pop-container">
+                <!-- ===== top === -->
+                <div class="top">
+                    <a ><img src="./images/pngegg.png" alt=""></a>
+                    <p>Customize Color</p>
+                </div>
+                <!-- === bottom ======== -->            
+                <div class="bottom">
+                   
+                   <!-- =============== btn ============= -->
+                   <div class="color-btn">
+                       <p>Change the color</p>
+                    <form class="form" id="c-btn-form" action="">
+                        <input  type="color" name="color" id="c-btn">
+                        <input type="submit" value="Change color">
+                    </form>
+               </div>
+               <!-- =================== font ========== -->
+               <div class="color-font">
+                   <p>Change the font color</p>
+                <form class="form" id="c-font-form" action="">
+                    <input type="color" name="color" id="c-font">
+                    <input type="submit" value="Change color">
+                </form>
+           </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================ -->
+        <div class="pop1">
+            <div class="pop-container">
+                <!-- ===== top === -->
+                <div class="top">
+                    <a ><img src="./images/pngegg.png" alt=""></a>
+                    <p>Customize Color</p>
+                </div>
+                <!-- === bottom ======== -->            
+                <div class="bottom">
+                   
+                   <!-- =============== btn ============= -->
+                   <div class="color-btn">
+                       <p>Change the color</p>
+                    <form class="form1" id="c-btn-form-mo" action="">
+                        <input  type="color" name="color" id="c-btn-mo">
+                        <input type="submit" value="Change color">
+                    </form>
+               </div>
+               <!-- =================== font ========== -->
+               <div class="color-font">
+                   <p>Change the font color</p>
+                <form class="form1" id="c-font-form-mo" action="">
+                    <input type="color" name="color" id="c-font-mo">
+                    <input type="submit" value="Change color">
+                </form>
+           </div>
+                </div>
+            </div>
+        </div>
+  </div>
+    <!-- =========== js ========= -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

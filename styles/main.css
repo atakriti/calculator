@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+* button {
+  cursor: pointer;
+}
+* input {
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg.jpg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.main-container {
+  width: 50%;
+  display: flex;
+  margin-left: 30%;
+}
+.main-container .container {
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+  box-shadow: 0px 3px 10px black;
+}
+.main-container .container p {
+  border: 1px black solid;
+  border-radius: 20px 0 0 0;
+  font-size: 2.5vw;
+  height: 5vw;
+  padding: 2%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+}
+.main-container .container .calculator {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .container .calculator div {
+  display: flex;
+}
+.main-container .container .calculator div button {
+  width: 25%;
+  font-size: 2.5vw;
+  padding: 3%;
+  background-color: darkred;
+  border: 1px black solid;
+  outline: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.main-container .container .calculator div button:hover {
+  box-shadow: 2px 2px 10px black inset;
+}
+.main-container .container .calculator div .custom-color {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 0 10px;
+}
+.main-container .container .calculator div .custom-color a {
+  display: flex;
+  width: 30%;
+}
+.main-container .container .calculator div .custom-color a img {
+  width: 100%;
+  height: 100%;
+}
+.main-container .container .calculator div .mo {
+  display: none;
+}
+.main-container .pop1 {
+  display: none;
+}
+.main-container .pop {
+  background-color: rgb(109, 109, 109);
+  width: 30%;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0px 3px 10px black;
+}
+.main-container .pop .pop-container {
+  padding: 5%;
+}
+.main-container .pop .pop-container .top a {
+  display: flex;
+  width: 100%;
+}
+.main-container .pop .pop-container .top a img {
+  width: 100%;
+  height: 100%;
+}
+.main-container .pop .pop-container .top p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4vw;
+  margin-top: 3%;
+}
+.main-container .pop .pop-container .bottom {
+  margin-top: 5%;
+}
+.main-container .pop .pop-container .bottom div {
+  border: 1px black solid;
+  margin-bottom: 5%;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.158);
+  border-radius: 5px;
+}
+.main-container .pop .pop-container .bottom div p {
+  text-align: center;
+  font-size: 1vw;
+}
+.main-container .pop .pop-container .bottom div form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-container .pop .pop-container .bottom div form input[type=color] {
+  width: 30%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.main-container .pop .pop-container .bottom div form input[type=submit] {
+  background-color: transparent;
+  border: 1px black solid;
+  width: 60%;
+  font-size: 0.8vw;
+  padding: 2% 0;
+  border-radius: 10px;
+  background-color: darkred;
+  color: white;
+}
+.main-container .pop .pop-container .bottom div form input[type=submit]:hover {
+  background-color: rgb(94, 1, 1);
+}
+
+@keyframes popUp {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes popOut {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+@keyframes popScaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes popScaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@media only screen and (max-width: 800px) {
+  body {
+    background-position: center;
+    background-size: 160%;
+    position: relative;
+  }
+  body .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.521);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .main-container {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .main-container .container {
+    border-radius: 0;
+  }
+  .main-container .container p {
+    border-radius: 0;
+    height: 15vw;
+    font-size: 7vw;
+  }
+  .main-container .container .calculator div button {
+    font-size: 6vw;
+  }
+  .main-container .container .calculator div .custom-color a {
+    width: 50%;
+  }
+  .main-container .container .calculator div .custom-color {
+    border-radius: 0;
+    display: none;
+  }
+  .main-container .container .calculator div .mo {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    display: block;
+  }
+  .main-container .container .calculator div .mo a {
+    display: flex;
+    width: 30%;
+  }
+  .main-container .container .calculator div .mo a img {
+    width: 100%;
+    height: 100%;
+  }
+  .main-container .pop {
+    display: none;
+  }
+  .main-container .pop1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+  }
+  .main-container .pop1 .pop-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.76);
+    line-height: 1;
+    padding: 3%;
+  }
+  .main-container .pop1 .pop-container .top {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container .pop1 .pop-container .top a {
+    display: flex;
+    width: 30%;
+  }
+  .main-container .pop1 .pop-container .top a img {
+    width: 100%;
+    height: 100%;
+  }
+  .main-container .pop1 .pop-container .top p {
+    font-size: 7vw;
+    color: white;
+    margin-top: 5%;
+    text-align: center;
+  }
+  .main-container .pop1 .pop-container .bottom {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5;
+  }
+  .main-container .pop1 .pop-container .bottom div {
+    width: 100%;
+  }
+  .main-container .pop1 .pop-container .bottom div p {
+    font-size: 4vw;
+    color: white;
+  }
+  .main-container .pop1 .pop-container .bottom div form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-container .pop1 .pop-container .bottom div form input[type=color] {
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .main-container .pop1 .pop-container .bottom div form input[type=submit] {
+    width: 50%;
+    font-size: 3vw;
+    padding: 3% 0;
+    background-color: transparent;
+    border: 1px white solid;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
