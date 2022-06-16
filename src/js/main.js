@@ -103,7 +103,7 @@ customColorMo.addEventListener("click", () => {
         setTimeout(() => (pop1.style.transform = "translateY(0%)", pop1.style.opacity = "1"), 100)
         pop1.style.animation = "popScaleUp 1s"
     } else {
-       setTimeout(() => ( pop1.style.transform = "translateY(-100%)",pop1.style.opacity = "0"),1000)
+       setTimeout(() => ( pop1.style.transform = "translateY(-100%)",pop1.style.opacity = "0"),500)
     //    pop1.style.animation = "popOut 2s"
     pop1.style.animation = "popScaleDown 1s"
         
